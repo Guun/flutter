@@ -16,13 +16,15 @@
     </div>
     
     <div class='col-xs-6'>
-        <% for @p in @posts %>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <p><%= @p.content %></p>
+        <%= render '/components/post_form' %>
+        
+            <% for @p in @posts %>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><%= @p.content %></p>
+                </div>
             </div>
-        </div>
-        <% end %>
+            <% end %>
     </div>
     
     <div class='col-xs-3'>
